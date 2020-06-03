@@ -15,7 +15,7 @@ $(function() {
     // Check if a string contains lower case characters
     + "<li><div class='collapsible-header'>"
     + "<h6>--> Check if a string contains lower case characters</h6></div>"
-    + "<div class='collapsible-body codejs'></div></li>"
+    + "<div class='collapsible-body codejs'>"+ if_A_StringContainsLowerCaseCharacters() +"</div></li>"
 
     // Check if a string contains only digits
     + "<li><div class='collapsible-header'>"
@@ -209,5 +209,14 @@ function if_A_PathIsRelative() {
     + "<span class='codejs-function'>isRelative</span>('C:\\foo\\bar\\baz');    // false<br>"
     + "<span class='codejs-function'>isRelative</span>('foo/bar/baz.txt');      // true<br>"
     + "<span class='codejs-function'>isRelative</span>('foo.md');               // true<br>"
+    return code;
+}
+
+function if_A_StringContainsLowerCaseCharacters() {
+    let code = "<code class='javascript'><span class='codejs-keyword'>let </span>"
+    + "containsLowerCase = str => str !== str.<span class='codejs-defMethod'>toUpperCase()</span>;"
+    + "<br><br>// Examples<br>"
+    + "<span class='codejs-function'>containsLowerCase</span>('Hello World'); // true<br>"
+    + "<span class='codejs-function'>containsLowerCase</span>('HELLO WORLD'); // false<br>"
     return code;
 }
