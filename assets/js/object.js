@@ -15,7 +15,7 @@ $(function() {
     // Check if an object is empty
     + "<li><div class='collapsible-header'>"
     + "<h6>$ Check if an object is empty</h6></div>"
-    + "<div class='collapsible-body codejs'></div></li>"
+    + "<div class='collapsible-body codejs'>"+ if_an_ObjectIsEmpty() +"</div></li>"
 
     // Check if multiple objects are equal
     + "<li><div class='collapsible-header'>"
@@ -87,5 +87,14 @@ function if_A_ValueIsAnObject() {
     + "<span class='codejs-function'>isObject</span>('hello world');    // false<br>"
     + "<span class='codejs-function'>isObject</span>({});               // true>br>"
     + "<span class='codejs-function'>isObject</span>([]);               // true <br>"
+    return code;
+}
+
+function if_an_ObjectIsEmpty() {
+    let code = "<code class='javascript'><span class='codejs-keyword'>let </span>"
+    + "isEmpty = obj => Reflect.<span class='codejs-defMethod'>ownKeys(obj)</span>.length === 0"
+    + " && obj.constructor === <span class='codejs-keyword'>Object</span>;<br><br>// Or for "
+    + "enumerable property names only<br><span class='codejs-keyword'>let </span>"
+    + "isEmpty = obj => <span class='codejs-other'>JSON</span>.stringify(obj) === '<span class='codejs-keyword'>{}</span>';"
     return code;
 }
