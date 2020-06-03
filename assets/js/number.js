@@ -15,7 +15,7 @@ $(function() {
     // Calculate the average of arguments
     + "<li><div class='collapsible-header'>"
     + "<h6>--> Calculate the average of arguments</h6></div>"
-    + "<div class='collapsible-body codejs'></div></li>"
+    + "<div class='collapsible-body codejs'>"+ calculateAverageOfArguments() +"</div></li>"
 
     // Calculate the division of arguments
     + "<li><div class='collapsible-header'>"
@@ -172,5 +172,13 @@ function calculateFibonacciNumbers() {
     + "<span class='codejs-function'>fibo</span>(3);    // 2<br>"
     + "<span class='codejs-function'>fibo</span>(4);    // 3<br>"
     + "<span class='codejs-function'>fibo</span>(5);    // 5<br>"
+    return code;
+}
+
+function calculateAverageOfArguments() {
+    let code = "<code class='javascript'><span class='codejs-keyword'>let </span>"
+    + "average = <span class='codejs-function'>(...args)</span> => args.<span class="
+    + "'codejs-other'>reduce((a, b) => a + b)</span> / args.length;<br><br>// Example<br>"
+    + "<span class='codejs-function'>average</span>(1, 2, 3, 4); // 2.5"
     return code;
 }
