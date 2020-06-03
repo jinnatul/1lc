@@ -15,7 +15,7 @@ $(function() {
     // Check if a value is an async function
     + "<li><div class='collapsible-header'>"
     + "<h6>--> Check if a value is an async function</h6></div>"
-    + "<div class='collapsible-body codejs'></div></li>"
+    + "<div class='collapsible-body codejs'>"+ if_A_ValueIsAnAsyncFunction() +"</div></li>"
 
     // Compose functions from left to right
     + "<li><div class='collapsible-header'>"
@@ -104,5 +104,15 @@ function if_A_ValueIs_A_GeneratorFunction() {
     + "[object GeneratorFunction]</span>';<br><br>// Examples<br>"
     + "isGeneratorFunction(<span class='codejs-function'>function</span>() {});     // false"
     + "isGeneratorFunction(<span class='codejs-function'>function</span>*() {});    // true"
+    return code;
+}
+
+function if_A_ValueIsAnAsyncFunction() {
+    let code = "<code class='javascript'><span class='codejs-keyword'>let </span>"
+    + "isAsyncFunction = v => <span class='codejs-defMethod'>Object.prototype.toString.call</span>(v) === "
+    + "'<span class='codejs-other'>[object AsyncFunction]</span>';<br><br>// Examples<br>"
+    + "<span class='codejs-function'>isAsyncFunction(function() {})</span>; // false<br>"
+    + "<span class='codejs-function'>isAsyncFunction(function*() {})</span>; // false<br>"
+    + "<span class='codejs-function'>isAsyncFunction(async function() {})</span>; // true<br>"
     return code;
 }
