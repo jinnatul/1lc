@@ -15,7 +15,7 @@ $(function() {
     // Check if an array contains a value matching some criterias
     + "<li><div class='collapsible-header'>"
     + "<h6>$ Check if an array contains a value matching some criterias</h6></div>"
-    + "<div class='collapsible-body codejs'></div></li>"
+    + "<div class='collapsible-body codejs'>"+ if_an_arrayContains_A_valueMatchingSomeCriterias() +"</div></li>"
 
     // Check if an array is not empty
     + "<li><div class='collapsible-header'>"
@@ -205,4 +205,14 @@ function allItemsArrayEqual() {
     + "areEqual([1, 2, 3, 4]); // false<br>"
     + "areEqual(['hello', 'hello', 'hello']); // true<br>";
     return code
+}
+
+function if_an_arrayContains_A_valueMatchingSomeCriterias() {
+    let code = "<code class='javascript'><span class='codejs-keyword'>let </span>"
+    + "contains = <span class='codejs-function'>(arr, criteria)</span> => arr.some(v => criteria(v));"
+    + "<br><br>// Examples<br>"
+    + "<span class='codejs-function'>contains</span>([10, 20, 30], v => v > 25 ); // true<br>"
+    + "<span class='codejs-function'>contains</span>([10, 20, 30], v => v > 100 || v < 15 ); // true<br>"
+    + "<span class='codejs-function'>contains</span>([10, 20, 30], v => v > 100 ); // false<br>"
+    return code;
 }
