@@ -15,7 +15,7 @@ $(function() {
     // Check if a date is today
     + "<li><div class='collapsible-header'>"
     + "<h6>--> Check if a date is today</h6></div>"
-    + "<div class='collapsible-body codejs'></div></li>"
+    + "<div class='collapsible-body codejs'>"+ if_a_DateIsToday() +"</div></li>"
 
     // Check if a year is leap year
     + "<li><div class='collapsible-header'>"
@@ -116,5 +116,14 @@ function if_A_dateBetweenTwoDates() {
     + "(date.<span class='codejs-defMethod'>getTime()</span> >= min.<span class='codejs-defMethod'>"
     + "getTime()</span> && date.<span class='codejs-defMethod'>getTime()</span> "
     + "<= max.<span class='codejs-defMethod'>getTime()</span>);"
+    return code;
+}
+
+function if_a_DateIsToday() {
+    let code = "// `date` is a Date object<br><br>"
+    + "<code class='javascript'><span class='codejs-keyword'>let </span>"
+    + "isToday = <span class='codejs-function'>(date)</span> => date.<span class='codejs-defMethod'>"
+    + "toISOString()</span>.slice(0, 10) === <span class='codejs-keyword'>new </span>"
+    + "<span class='codejs-defMethod'>Date().toISOString()</span>.slice(0, 10);"
     return code;
 }
