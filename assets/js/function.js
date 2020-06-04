@@ -20,7 +20,7 @@ $(function() {
     // Compose functions from left to right
     + "<li><div class='collapsible-header'>"
     + "<h6>--> Compose functions from left to right</h6></div>"
-    + "<div class='collapsible-body codejs'></div></li>"
+    + "<div class='collapsible-body codejs'>"+ composeFunctionsFromLeftToRight() +"</div></li>"
 
     // Compose functions
     + "<li><div class='collapsible-header'>"
@@ -116,6 +116,22 @@ function if_A_ValueIsAnAsyncFunction() {
     + "<span class='codejs-function'>isAsyncFunction(function() {})</span>; // false<br>"
     + "<span class='codejs-function'>isAsyncFunction(function*() {})</span>; // false<br>"
     + "<span class='codejs-function'>isAsyncFunction(async function() {})</span>; // true<br>"
+    + "</code>"
+    return code;
+}
+
+function composeFunctionsFromLeftToRight() {
+    let code = "<code class='javascript'><span class='codejs-keyword'>let </span>"
+    + "pipe = (...fns) => x => fns.<span class='codejs-defMethod'>reduce</span>((y, f) => f(y), x);"
+    + "<br><br>// Example<br><span class='codejs-keyword'>let </span>"
+    + "lowercase = str => str.<span class='codejs-defMethod'>toLowerCase</span>();<br><span class='codejs"
+    + "-keyword'>let </span>capitalize = str => `${str.<span class='codejs-defMethod'>charAt(0).toUpperCase"
+    + "</span>()}${str.<span class='codejs-defMethod'>slice</span>(1)}`;<br><span class='codejs-keyword'>"
+    + "let </span>reverse = str => str.<span class='codejs-defMethod'>split</span>('').<span class='"
+    + "codejs-defMethod'>reverse</span>().<span class='codejs-defMethod'>join</span>('');<br>"
+    + "<span class='codejs-keyword'>let </span>fn = pipe(lowercase, capitalize, reverse);<br><br>"
+    + "// We will execute `lowercase`, `capitalize` and `reverse` in order<br>"
+    + "fn('Hello World') === 'dlrow olleH';<br>"
     + "</code>"
     return code;
 }
