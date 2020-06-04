@@ -20,7 +20,7 @@ $(function() {
     // Detect internet explorer browser
     + "<li><div class='collapsible-header'>"
     + "<h6>$ Detect internet explorer browser</h6></div>"
-    + "<div class='collapsible-body codejs'></div>"
+    + "<div class='collapsible-body codejs'>"+ detectInternetExplorerBrowser() +"</div>"
 
     // Detect macos browser
     + "<li><div class='collapsible-header'>"
@@ -129,6 +129,13 @@ function ifTheTouchEventsAreSupported() {
     + "touchSupported = () => ('<span class='codejs-keyword'>ontouchstart</span>' in window || "
     + "window.<span class='codejs-defMethod'>DocumentTouch</span> && <span class='codejs-keyword'>"
     + "document</span> instanceof window.<span class='codejs-defMethod'>DocumentTouch</span>);"
+    + "</code>"
+    return code;
+}
+
+function detectInternetExplorerBrowser() {
+    let code = "<code class='javascript'><span class='codejs-keyword'>let </span>"
+    + "isIE = !!<span class='codejs-defMethod'>document.documentMode</span>;"
     + "</code>"
     return code;
 }
