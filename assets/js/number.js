@@ -20,7 +20,7 @@ $(function() {
     // Calculate the division of arguments
     + "<li><div class='collapsible-header'>"
     + "<h6>--> Calculate the division of arguments</h6></div>"
-    + "<div class='collapsible-body codejs'></div></li>"
+    + "<div class='collapsible-body codejs'>"+ calculateTheDivisionOfArguments() +"</div></li>"
 
     // Calculate the factorial of a number
     + "<li><div class='collapsible-header'>"
@@ -182,6 +182,15 @@ function calculateAverageOfArguments() {
     + "average = <span class='codejs-function'>(...args)</span> => args.<span class="
     + "'codejs-other'>reduce((a, b) => a + b)</span> / args.length;<br><br>// Example<br>"
     + "<span class='codejs-function'>average</span>(1, 2, 3, 4); // 2.5"
+    + "</code>"
+    return code;
+}
+
+function calculateTheDivisionOfArguments() {
+    let code = "<code class='javascript'><span class='codejs-keyword'>let </span>"
+    + "division = (...args) => args.<span class='codejs-defMethod'>reduce</span>((a, b) => a / b);"
+    + "<br><br>// Example<br>"
+    + "<span class='codejs-function'>division</span>(1, 2, 3, 4);   // 0.04166666666666666"
     + "</code>"
     return code;
 }
