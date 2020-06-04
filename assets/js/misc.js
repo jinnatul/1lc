@@ -20,7 +20,7 @@ $(function() {
     // Check if an object is a promise
     + "<li><div class='collapsible-header'>"
     + "<h6>$ Check if an object is a promise</h6></div>"
-    + "<div class='collapsible-body codejs'></div></li>"
+    + "<div class='collapsible-body codejs'>"+ if_a_objectIs_A_promise() +"</div></li>"
 
     // Check if the code is running in node js
     + "<li><div class='collapsible-header'>"
@@ -142,6 +142,16 @@ function if_a_valueIsNil() {
     let code = "<code class='javascript'><span class='codejs-keyword'>let </span>"
     + "isNil = <span class='codejs-function'>(value)</span> => value == <span class='codejs-other'>"
     + "null;</span>"
+    + "</code>"
+    return code;
+}
+
+function if_a_objectIs_A_promise() {
+    let code = "<code class='javascript'><span class='codejs-keyword'>let </span>"
+    + "isPromise = obj => !!obj && (<span class='codejs-keyword'>typeof</span> obj === '<span class="
+    + "'codejs-other'>object</span>' || <span class='codejs-keyword'>typeof</span> obj === '<span class"
+    + "='codejs-defMethod'>function</span>') && <span class='codejs-keyword'>typeof</span> obj.then === "
+    + "'<span class='codejs-defMethod'>function</span>';"
     + "</code>"
     return code;
 }
