@@ -20,7 +20,7 @@ $(function() {
     // Check if a string contains only digits
     + "<li><div class='collapsible-header'>"
     + "<h6>--> Check if a string contains only digits</h6></div>"
-    + "<div class='collapsible-body codejs'></div></li>"
+    + "<div class='collapsible-body codejs'>"+ if_a_stringContainsOnlyDigits() +"</div></li>"
 
     // Check if a string contains upper case characters
     + "<li><div class='collapsible-header'>"
@@ -220,6 +220,21 @@ function if_A_StringContainsLowerCaseCharacters() {
     + "<br><br>// Examples<br>"
     + "<span class='codejs-function'>containsLowerCase</span>('Hello World'); // true<br>"
     + "<span class='codejs-function'>containsLowerCase</span>('HELLO WORLD'); // false<br>"
+    + "</code>"
+    return code;
+}
+
+function if_a_stringContainsOnlyDigits() {
+    let code = "<code class='javascript'><span class='codejs-keyword'>let </span>"
+    + "isNumeric = str => !/[^0-9]/.<span class='codejs-defMethod'>test</span>(str);"
+    + "<br><br>// Examples<br>"
+    + "<span class='codejs-function'>isNumeric</span>(2); // true<br>"
+    + "<span class='codejs-function'>isNumeric</span>('23'); // true<br>"
+    + "<span class='codejs-function'>isNumeric</span>('00123'); // true<br>"
+    + "<span class='codejs-function'>isNumeric</span>('1.23'); // false<br>"
+    + "<span class='codejs-function'>isNumeric</span>('-Infinity'); // false<br>"
+    + "<span class='codejs-function'>isNumeric</span>('Infinity'); // false<br>"
+    + "<span class='codejs-function'>isNumeric</span>('NaN'); // false<br>"
     + "</code>"
     return code;
 }
