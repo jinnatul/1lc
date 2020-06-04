@@ -94,6 +94,7 @@ function if_A_ValueIs_A_Function() {
     + "isFunction(<span class='codejs-function'>function</span>*() {});         // true<br>"
     + "isFunction(<span class='codejs-keyword'>async</span> <span class='codejs-function'>"
     + "function</span>() {});    // true<br>"
+    + "</code>"
     return code;
 }
 
@@ -104,6 +105,7 @@ function if_A_ValueIs_A_GeneratorFunction() {
     + "[object GeneratorFunction]</span>';<br><br>// Examples<br>"
     + "isGeneratorFunction(<span class='codejs-function'>function</span>() {});     // false"
     + "isGeneratorFunction(<span class='codejs-function'>function</span>*() {});    // true"
+    + "</code>"
     return code;
 }
 
@@ -114,5 +116,6 @@ function if_A_ValueIsAnAsyncFunction() {
     + "<span class='codejs-function'>isAsyncFunction(function() {})</span>; // false<br>"
     + "<span class='codejs-function'>isAsyncFunction(function*() {})</span>; // false<br>"
     + "<span class='codejs-function'>isAsyncFunction(async function() {})</span>; // true<br>"
+    + "</code>"
     return code;
 }

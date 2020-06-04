@@ -159,6 +159,7 @@ function anOrdinalSuffixTo_A_Number() {
     + "<span class='codejs-function'>addOrdinal</span>(10);      // '10th'<br>"
     + "<span class='codejs-function'>addOrdinal</span>(11);      // '11th'<br>"
     + "<span class='codejs-function'>addOrdinal</span>(12);      // '12th'<br>"
+    + "</code>"
     return code;
 }
 
@@ -172,6 +173,7 @@ function calculateFibonacciNumbers() {
     + "<span class='codejs-function'>fibo</span>(3);    // 2<br>"
     + "<span class='codejs-function'>fibo</span>(4);    // 3<br>"
     + "<span class='codejs-function'>fibo</span>(5);    // 5<br>"
+    + "</code>"
     return code;
 }
 
@@ -180,5 +182,6 @@ function calculateAverageOfArguments() {
     + "average = <span class='codejs-function'>(...args)</span> => args.<span class="
     + "'codejs-other'>reduce((a, b) => a + b)</span> / args.length;<br><br>// Example<br>"
     + "<span class='codejs-function'>average</span>(1, 2, 3, 4); // 2.5"
+    + "</code>"
     return code;
 }

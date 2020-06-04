@@ -192,7 +192,8 @@ function allArrayElementsEqual() {
     + "isEqual(['<span class='codejs-value'>foo</span>', '<span class='codejs-value'>bar</span>'],"
     + "'<span class='codejs-value'>foo</span>');     // false<br>"
     + "isEqual(['<span class='codejs-value'>bar</span>', '<span class='codejs-value'>bar</span>']," 
-    + "'<span class='codejs-value'>foo</span>');     // false</code>"
+    + "'<span class='codejs-value'>foo</span>');     // false"
+    + "</code>"
     return code
 }
 
@@ -204,6 +205,7 @@ function allItemsArrayEqual() {
     + "areEqual = arr => <span class='codejs-keyword'>new </span> Set(arr).size === 1;<br><br>// Examples<br>"
     + "areEqual([1, 2, 3, 4]); // false<br>"
     + "areEqual(['hello', 'hello', 'hello']); // true<br>";
+    + "</code>"
     return code
 }
 
@@ -214,6 +216,7 @@ function if_an_arrayContains_A_valueMatchingSomeCriterias() {
     + "<span class='codejs-function'>contains</span>([10, 20, 30], v => v > 25 ); // true<br>"
     + "<span class='codejs-function'>contains</span>([10, 20, 30], v => v > 100 || v < 15 ); // true<br>"
     + "<span class='codejs-function'>contains</span>([10, 20, 30], v => v > 100 ); // false<br>"
+    + "</code>"
     return code;
 }
 
@@ -224,5 +227,6 @@ function if_a_arrayIsNotEmpty() {
     + "keys</span>(arr).length > 0;<br><br>// Examples<br>"
     + "<span class='codejs-function'>isNotEmpty</span>([]); // false<br>"
     + "<span class='codejs-function'>isNotEmpty</span>([1, 2, 3]); // true<br>"
+    + "</code>"
     return code;
 }

@@ -198,6 +198,7 @@ function capitalize_A_String() {
     + "capitalize = str => `<span class='codejs-other'>${str.charAt(0).toUpperCase()}"
     + "${str.slice(1)}</span>`;<br><br>// Example<br>"
     + "<span class='codejs-function'>capitalize</span>('hello world');      // 'Hello world'"
+    + "</code>"
     return code;
 }
 
@@ -209,6 +210,7 @@ function if_A_PathIsRelative() {
     + "<span class='codejs-function'>isRelative</span>('C:\\foo\\bar\\baz');    // false<br>"
     + "<span class='codejs-function'>isRelative</span>('foo/bar/baz.txt');      // true<br>"
     + "<span class='codejs-function'>isRelative</span>('foo.md');               // true<br>"
+    + "</code>"
     return code;
 }
 
@@ -218,5 +220,6 @@ function if_A_StringContainsLowerCaseCharacters() {
     + "<br><br>// Examples<br>"
     + "<span class='codejs-function'>containsLowerCase</span>('Hello World'); // true<br>"
     + "<span class='codejs-function'>containsLowerCase</span>('HELLO WORLD'); // false<br>"
+    + "</code>"
     return code;
 }

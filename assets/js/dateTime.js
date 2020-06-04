@@ -20,7 +20,7 @@ $(function() {
     // Check if a year is leap year
     + "<li><div class='collapsible-header'>"
     + "<h6>--> Check if a year is leap year</h6></div>"
-    + "<div class='collapsible-body codejs'></div></li>"
+    + "<div class='collapsible-body codejs'>"+ if_a_yearIsLeapYear() +"</div></li>"
 
     // Compare two dates
     + "<li><div class='collapsible-header'>"
@@ -106,6 +106,7 @@ function numberOfDifferenceDaysBetweenTwoDates() {
     + "// Example<br>"
     + "diffDays(<span class='codejs-keyword'>new </span><span class='codejs-defMethod'>Date</span>('2014-12-19'),"
     + "<span class='codejs-keyword'>new </span><span class='codejs-defMethod'>Date</span>('2020-01-01'));   // 1839"
+    + "</code>"
     return code
 }
 
@@ -116,6 +117,7 @@ function if_A_dateBetweenTwoDates() {
     + "(date.<span class='codejs-defMethod'>getTime()</span> >= min.<span class='codejs-defMethod'>"
     + "getTime()</span> && date.<span class='codejs-defMethod'>getTime()</span> "
     + "<= max.<span class='codejs-defMethod'>getTime()</span>);"
+    + "</code>"
     return code;
 }
 
@@ -125,5 +127,16 @@ function if_a_DateIsToday() {
     + "isToday = <span class='codejs-function'>(date)</span> => date.<span class='codejs-defMethod'>"
     + "toISOString()</span>.slice(0, 10) === <span class='codejs-keyword'>new </span>"
     + "<span class='codejs-defMethod'>Date().toISOString()</span>.slice(0, 10);"
+    + "</code>"
+    return code;
+}
+
+function if_a_yearIsLeapYear() {
+    let code = "<code class='javascript'><span class='codejs-keyword'>let </span>"
+    + "isLeapYear = year => <span class='codejs-other'>(((year % 4 === 0) && (year % 100 !== 0)) || (year % 400 === 0))"
+    + "</span>;<br><br>// Or<br>// Get the number of days in February<br><span class='codejs-keyword'>let </span>"
+    + "isLeapYear = year => <span class='codejs-keyword'>new</span> <span class='codejs-defMethod'>"
+    + "Date</span>(year, 1, 29).<span class='codejs-defMethod'>getDate</span>() === 29;"
+    + "</code>"
     return code;
 }

@@ -76,6 +76,7 @@ function if_A_ValueIs_A_PlainObject() {
     + "<span class='codejs-function'>isPlainObject</span>(function() {});           // false<br>"
     + "<span class='codejs-function'>isPlainObject</span>({});                      // true<br>"
     + "<span class='codejs-function'>isPlainObject</span>({ a: '1', b: '2' });      // true<br>"
+    + "</code>"
     return code;
 }
 
@@ -87,6 +88,7 @@ function if_A_ValueIsAnObject() {
     + "<span class='codejs-function'>isObject</span>('hello world');    // false<br>"
     + "<span class='codejs-function'>isObject</span>({});               // true>br>"
     + "<span class='codejs-function'>isObject</span>([]);               // true <br>"
+    + "</code>"
     return code;
 }
 
@@ -96,5 +98,6 @@ function if_an_ObjectIsEmpty() {
     + " && obj.constructor === <span class='codejs-keyword'>Object</span>;<br><br>// Or for "
     + "enumerable property names only<br><span class='codejs-keyword'>let </span>"
     + "isEmpty = obj => <span class='codejs-other'>JSON</span>.stringify(obj) === '<span class='codejs-keyword'>{}</span>';"
+    + "</code>"
     return code;
 }

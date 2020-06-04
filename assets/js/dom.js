@@ -112,6 +112,7 @@ function ifAnElementIsADescendantOfAnother() {
     let code = "<code class='javascript'><span class='codejs-keyword'>let </span>"
     + "isDescendant = <span class='codejs-function'>(child, parent)</span> => "
     + "parent.<span class='codejs-defMethod'>contains</span>(child);"
+    + "</code>"
     return code;
 }
 
@@ -119,6 +120,7 @@ function ifAnElemenTIsFocused() {
     let code = "<code class='javascript'><span class='codejs-keyword'>let </span>"
     + "hasFocus = ele => (ele === <code class='javascript'><span class='codejs-keyword'>document</span>."
     + "<span class='codejs-defMethod'>activeElement)</span>;"
+    + "</code>"
     return code;
 }
 
@@ -127,5 +129,6 @@ function ifTheTouchEventsAreSupported() {
     + "touchSupported = () => ('<span class='codejs-keyword'>ontouchstart</span>' in window || "
     + "window.<span class='codejs-defMethod'>DocumentTouch</span> && <span class='codejs-keyword'>"
     + "document</span> instanceof window.<span class='codejs-defMethod'>DocumentTouch</span>);"
+    + "</code>"
     return code;
 }

@@ -126,6 +126,7 @@ function if_A_ValueIs_A_number() {
     let code = "<code class='javascript'><span class='codejs-keyword'>let </span>"
     + "isNumber = value => !<span class='codejs-defMethod'>isNaN</span>(parseFloat(value)) "
     + "&& <span class='codejs-defMethod'>isFinite</span>(value);"
+    + "</code>"
     return code;
 }
 
@@ -133,6 +134,7 @@ function if_A_ValueIs_A_RegularExpression() {
     let code = "<code class='javascript'><span class='codejs-keyword'>let </span>"
     + "isRegExp = value => <span class='codejs-keyword'>Object</span>.prototype.toString."
     + "<span class='codejs-defMethod'>call</span>(value) === '<span class='codejs-defMethod'>[object RegExp]</span>';"
+    + "</code>"
     return code;
 }
 
@@ -140,5 +142,6 @@ function if_a_valueIsNil() {
     let code = "<code class='javascript'><span class='codejs-keyword'>let </span>"
     + "isNil = <span class='codejs-function'>(value)</span> => value == <span class='codejs-other'>"
     + "null;</span>"
+    + "</code>"
     return code;
 }
