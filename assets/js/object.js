@@ -20,7 +20,7 @@ $(function() {
     // Check if multiple objects are equal
     + "<li><div class='collapsible-header'>"
     + "<h6>$ Check if multiple objects are equal</h6></div>"
-    + "<div class='collapsible-body codejs'></div></li>"
+    + "<div class='collapsible-body codejs'>"+ ifMultipleObjectsAreEqual() +"</div></li>"
 
     // Create an empty map that does not have properties
     + "<li><div class='collapsible-header'>"
@@ -98,6 +98,18 @@ function if_an_ObjectIsEmpty() {
     + " && obj.constructor === <span class='codejs-keyword'>Object</span>;<br><br>// Or for "
     + "enumerable property names only<br><span class='codejs-keyword'>let </span>"
     + "isEmpty = obj => <span class='codejs-other'>JSON</span>.stringify(obj) === '<span class='codejs-keyword'>{}</span>';"
+    + "</code>"
+    return code;
+}
+
+function ifMultipleObjectsAreEqual() {
+    let code = "<code class='javascript'><span class='codejs-keyword'>let </span>"
+    + "isEqual = (...objects) => objects.<span class='codejs-defMethod'>every</span>(obj => <span "
+    + "class='codejs-other'>JSON</span>.<span class='codejs-defMethod'>stringify</span>(obj) === <span "
+    + "class='codejs-other'>JSON</span>.<span class='codejs-defMethod'>stringify</span>(objects[0]));"
+    + "<br><br>// Examples<br>"
+    + "<span class='codejs-function'>isEqual</span>({ foo: 'bar' }, { foo: 'bar' }); // true<br>"
+    + "<span class='codejs-function'>isEqual</span>({ foo: 'bar' }, { bar: 'foo' }); // false<br>"
     + "</code>"
     return code;
 }
