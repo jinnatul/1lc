@@ -30,10 +30,28 @@ body {
     margin: 2rem 7rem;
 }
 
+/* logo rotate 360 */
+#appLogo {
+    width: 60px;
+    height: 60px;
+    margin: 2px 15px;
+    border-radius: 50%;
+    -webkit-animation:spin 10s linear infinite;
+    -moz-animation:spin 10s linear infinite;
+    animation:spin 10s linear infinite;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+}
+@-moz-keyframes spin { 100% { -moz-transform: rotate(360deg); } }
+@-webkit-keyframes spin { 100% { -webkit-transform: rotate(360deg); } }
+@keyframes spin { 100% { -webkit-transform: rotate(360deg); transform:rotate(360deg); } }
+
 /* Code elements */
 .codejs{
     overflow-x:auto;
-    padding:.5em;
+    margin: 5px 5px 5px 5px;
     background:#0d122c;
     color:#f8f8f2;
 }
