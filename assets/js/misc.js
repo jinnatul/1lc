@@ -25,7 +25,7 @@ $(function() {
     // Check if the code is running in node js
     + "<li><div class='collapsible-header'>"
     + "<h6>$ Check if the code is running in node js</h6></div>"
-    + "<div class='collapsible-body codejs'></div></li>"
+    + "<div class='collapsible-body codejs'>"+ ifTheCodeIsRunningInNodeJS() +"</div></li>"
 
     // Check if the code is running in the browser
     + "<li><div class='collapsible-header'>"
@@ -152,6 +152,15 @@ function if_a_objectIs_A_promise() {
     + "'codejs-other'>object</span>' || <span class='codejs-keyword'>typeof</span> obj === '<span class"
     + "='codejs-defMethod'>function</span>') && <span class='codejs-keyword'>typeof</span> obj.then === "
     + "'<span class='codejs-defMethod'>function</span>';"
+    + "</code>"
+    return code;
+}
+
+function ifTheCodeIsRunningInNodeJS() {
+    let code = "<code class='javascript'><span class='codejs-keyword'>let </span>"
+    + "isNode = <span class='codejs-keyword'>typeof</span> process !== '<span class='codejs-other'>"
+    + "undefined</span>' && process.versions != <span class='codejs-keyword'>null</span> && process."
+    + "versions.node != <span class='codejs-keyword'>null</span>;"
     + "</code>"
     return code;
 }
