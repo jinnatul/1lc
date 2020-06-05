@@ -25,7 +25,7 @@ $(function() {
     // Check if an array is subset of other array
     + "<li><div class='collapsible-header'>"
     + "<h6>$ Check if an array is subset of other array</h6></div>"
-    + "<div class='collapsible-body codejs'></div></li>"
+    + "<div class='collapsible-body codejs'>"+ ifAnArrayIsSubsetOfOtherArray() +"</div></li>"
 
     // Check if an object is an array
     + "<li><div class='collapsible-header'>"
@@ -227,6 +227,19 @@ function if_a_arrayIsNotEmpty() {
     + "keys</span>(arr).length > 0;<br><br>// Examples<br>"
     + "<span class='codejs-function'>isNotEmpty</span>([]); // false<br>"
     + "<span class='codejs-function'>isNotEmpty</span>([1, 2, 3]); // true<br>"
+    + "</code>"
+    return code;
+}
+
+function ifAnArrayIsSubsetOfOtherArray() {
+    let code = "<code class='javascript'><span class='codejs-keyword'>let </span>"
+    + "isSubset = <span class='codejs-function'>(a, b)</span> => (<span class='codejs-keyword'>new</span>"
+    + " <span class='codejs-defMethod'>Set</span>(b)).size === (<span class='codejs-keyword'>new</span> "
+    + "<span class='codejs-defMethod'>Set</span>(b.<span class='codejs-defMethod'>concat</span>(a))).size;"
+    + "<br><br>// Examples<br>"
+    + "<span class='codejs-function'>isSubset</span>([1,2], [1,2,3,4]); // true<br>"
+    + "<span class='codejs-function'>isSubset</span>([1,2,5], [1,2,3,4]); // false<br>"
+    + "<span class='codejs-function'>isSubset</span>([6], [1,2,3,4]); // false<br>"
     + "</code>"
     return code;
 }
