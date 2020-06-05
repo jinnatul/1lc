@@ -25,7 +25,7 @@ $(function() {
     // Calculate the factorial of a number
     + "<li><div class='collapsible-header'>"
     + "<h6>--> Calculate the factorial of a number</h6></div>"
-    + "<div class='collapsible-body codejs'></div></li>"
+    + "<div class='collapsible-body codejs'>"+ calculateTheFactorialOf_A_Number() +"</div></li>"
 
     // Calculate the mod of collection index
     + "<li><div class='collapsible-header'>"
@@ -191,6 +191,19 @@ function calculateTheDivisionOfArguments() {
     + "division = (...args) => args.<span class='codejs-defMethod'>reduce</span>((a, b) => a / b);"
     + "<br><br>// Example<br>"
     + "<span class='codejs-function'>division</span>(1, 2, 3, 4);   // 0.04166666666666666"
+    + "</code>"
+    return code;
+}
+
+function calculateTheFactorialOf_A_Number() {
+    let code = "<code class='javascript'><span class='codejs-keyword'>let </span>"
+    + "factorial = n => n <= 1 ? 1 : n * <span class='codejs-function'>factorial</span>(n - 1);"
+    + "<br><br>// Examples<br>"
+    + "<span class='codejs-function'>factorial</span>(2);   // 2<br>"
+    + "<span class='codejs-function'>factorial</span>(3);   // 6<br>"
+    + "<span class='codejs-function'>factorial</span>(4);   // 24<br>"
+    + "<span class='codejs-function'>factorial</span>(5);   // 120<br>"
+    + "<span class='codejs-function'>factorial</span>(6);   // 720<br>"
     + "</code>"
     return code;
 }
