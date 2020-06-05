@@ -25,7 +25,7 @@ $(function() {
     // Detect macos browser
     + "<li><div class='collapsible-header'>"
     + "<h6>$ Detect macos browser</h6></div>"
-    + "<div class='collapsible-body codejs'></div>"
+    + "<div class='collapsible-body codejs'>"+ detectMacosBrowser() +"</div>"
 
     // Get all siblings of an element
     + "<li><div class='collapsible-header'>"
@@ -136,6 +136,14 @@ function ifTheTouchEventsAreSupported() {
 function detectInternetExplorerBrowser() {
     let code = "<code class='javascript'><span class='codejs-keyword'>let </span>"
     + "isIE = !!<span class='codejs-defMethod'>document.documentMode</span>;"
+    + "</code>"
+    return code;
+}
+
+function detectMacosBrowser() {
+    let code = "<code class='javascript'><span class='codejs-keyword'>let </span>"
+    + "isMacBrowser = <span class='codejs-other'>/Mac|iPod|iPhone|iPad/</span>.<span class='codejs-"
+    + "defMethod'>test</span>(navigator.platform);"
     + "</code>"
     return code;
 }
