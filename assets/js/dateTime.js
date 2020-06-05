@@ -25,7 +25,7 @@ $(function() {
     // Compare two dates
     + "<li><div class='collapsible-header'>"
     + "<h6>--> Compare two dates</h6></div>"
-    + "<div class='collapsible-body codejs'></div></li>"
+    + "<div class='collapsible-body codejs'>"+ compareTwoDates() +"</div></li>"
 
     // Convert a date to yyyy mm dd format
     + "<li><div class='collapsible-header'>"
@@ -137,6 +137,17 @@ function if_a_yearIsLeapYear() {
     + "</span>;<br><br>// Or<br>// Get the number of days in February<br><span class='codejs-keyword'>let </span>"
     + "isLeapYear = year => <span class='codejs-keyword'>new</span> <span class='codejs-defMethod'>"
     + "Date</span>(year, 1, 29).<span class='codejs-defMethod'>getDate</span>() === 29;"
+    + "</code>"
+    return code;
+}
+
+function compareTwoDates() {
+    let code = "<code class='javascript'><span class='codejs-keyword'>let </span>"
+    + "compare = <span class='codejs-function'>(a, b)</span> => a.<span class='codejs-defMethod'>getTime"
+    + "</span>() > b.<span class='codejs-defMethod'>getTime</span>();<br><br>// Example<br>"
+    + "<span class='codejs-function'>compare</span>(<span class='codejs-keyword'>new</span> <span "
+    + "class='codejs-defMethod'>Date</span>('2020-03-30'), <span class='codejs-keyword'>new</span> "
+    + "<span class='codejs-defMethod'>Date</span>('2020-01-01'));    // true<br>"
     + "</code>"
     return code;
 }
