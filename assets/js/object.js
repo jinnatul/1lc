@@ -25,7 +25,7 @@ $(function() {
     // Create an empty map that does not have properties
     + "<li><div class='collapsible-header'>"
     + "<h6>$ Create an empty map that does not have properties</h6></div>"
-    + "<div class='collapsible-body codejs'></div></li>"
+    + "<div class='collapsible-body codejs'>"+ emptyMapThatDoesNotHaveProperties() +"</div></li>"
 
     // Create an object from the pairs of key and value
     + "<li><div class='collapsible-header'>"
@@ -110,6 +110,14 @@ function ifMultipleObjectsAreEqual() {
     + "<br><br>// Examples<br>"
     + "<span class='codejs-function'>isEqual</span>({ foo: 'bar' }, { foo: 'bar' }); // true<br>"
     + "<span class='codejs-function'>isEqual</span>({ foo: 'bar' }, { bar: 'foo' }); // false<br>"
+    + "</code>"
+    return code;
+}
+
+function emptyMapThatDoesNotHaveProperties() {
+    let code = "<code class='javascript'><span class='codejs-keyword'>let </span>"
+    + "map = <span class='codejs-keyword'>Object</span>.<span class='codejs-defMethod'>create</span>(null);"
+    + "<br><br>// OR<br><span class='codejs-keyword'>let </span> map = {};"
     + "</code>"
     return code;
 }
