@@ -25,7 +25,7 @@ $(function() {
     // Check if a string contains upper case characters
     + "<li><div class='collapsible-header'>"
     + "<h6>--> Check if a string contains upper case characters</h6></div>"
-    + "<div class='collapsible-body codejs'></div></li>"
+    + "<div class='collapsible-body codejs'>"+ if_A_StringContainsUpperCaseCharacters() +"</div></li>"
 
     // Check if a string contains whitespace
     + "<li><div class='collapsible-header'>"
@@ -235,6 +235,16 @@ function if_a_stringContainsOnlyDigits() {
     + "<span class='codejs-function'>isNumeric</span>('-Infinity'); // false<br>"
     + "<span class='codejs-function'>isNumeric</span>('Infinity'); // false<br>"
     + "<span class='codejs-function'>isNumeric</span>('NaN'); // false<br>"
+    + "</code>"
+    return code;
+}
+
+function if_A_StringContainsUpperCaseCharacters() {
+    let code = "<code class='javascript'><span class='codejs-keyword'>let </span>"
+    + "containsUpperCase = str => str !== str.<span class='codejs-defMethod'>toLowerCase</span>();"
+    + "<br><br>// Examples<br>"
+    + "<span class='codejs-function'>containsUpperCase</span>('Hello World'); // true<br>"
+    + "<span class='codejs-function'>containsUpperCase</span>('hello world'); // false<br>"
     + "</code>"
     return code;
 }
