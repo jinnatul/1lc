@@ -22,15 +22,10 @@ $(function() {
     + "<h6>--> Compose functions from left to right</h6></div>"
     + "<div class='collapsible-body codejs'>"+ composeFunctionsFromLeftToRight() +"</div></li>"
 
-    // Compose functions
-    + "<li><div class='collapsible-header'>"
-    + "<h6>--> Compose functions</h6></div>"
-    + "<div class='collapsible-body codejs'></div></li>"
-
     // Create an empty function
     + "<li><div class='collapsible-header'>"
     + "<h6>--> Create an empty function</h6></div>"
-    + "<div class='collapsible-body codejs'></div></li>"
+    + "<div class='collapsible-body codejs'>"+ createAnEmptyFunction() +"</div></li>"
 
     // Curry a function
     + "<li><div class='collapsible-header'>"
@@ -132,6 +127,14 @@ function composeFunctionsFromLeftToRight() {
     + "<span class='codejs-keyword'>let </span>fn = pipe(lowercase, capitalize, reverse);<br><br>"
     + "// We will execute `lowercase`, `capitalize` and `reverse` in order<br>"
     + "fn('Hello World') === 'dlrow olleH';<br>"
+    + "</code>"
+    return code;
+}
+
+function createAnEmptyFunction() {
+    let code = "<code class='javascript'><span class='codejs-keyword'>let </span>"
+    + "noop = () => <span class='codejs-other'>{}</span>;<br><br>// Or<br>"
+    + "<span class='codejs-keyword'>let </span>noop = <span class='codejs-defMethod'>Function</span>();"
     + "</code>"
     return code;
 }
