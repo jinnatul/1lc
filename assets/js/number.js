@@ -30,7 +30,7 @@ $(function() {
     // Calculate the mod of collection index
     + "<li><div class='collapsible-header'>"
     + "<h6>--> Calculate the mod of collection index</h6></div>"
-    + "<div class='collapsible-body codejs'></div></li>"
+    + "<div class='collapsible-body codejs'>"+ calculateTheModOfCollectionIndex() +"</div></li>"
 
     // Calculate the remainder of division of arguments
     + "<li><div class='collapsible-header'>"
@@ -204,6 +204,16 @@ function calculateTheFactorialOf_A_Number() {
     + "<span class='codejs-function'>factorial</span>(4);   // 24<br>"
     + "<span class='codejs-function'>factorial</span>(5);   // 120<br>"
     + "<span class='codejs-function'>factorial</span>(6);   // 720<br>"
+    + "</code>"
+    return code;
+}
+
+function calculateTheModOfCollectionIndex() {
+    let code = "<code class='javascript'><span class='codejs-keyword'>let </span>"
+    + "mod = <span class='codejs-function'>(a, b)</span> => ((a % b) + b) % b;<br><br>// Examples<br>"
+    + "<span class='codejs-function'>mod</span>(-1, 5); // 4<br>"
+    + "<span class='codejs-function'>mod</span>(3, 5); // 3<br>"
+    + "<span class='codejs-function'>mod</span>(6, 5); // 1<br>"
     + "</code>"
     return code;
 }
