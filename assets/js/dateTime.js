@@ -30,7 +30,7 @@ $(function() {
     // Convert a date to yyyy mm dd format
     + "<li><div class='collapsible-header'>"
     + "<h6>--> Convert a date to yyyy mm dd format</h6></div>"
-    + "<div class='collapsible-body codejs'></div></li>"
+    + "<div class='collapsible-body codejs'>"+ dateTo_yyyy_mm_dd_format() +"</div></li>"
 
     // Convert seconds to hh mm ss format
     + "<li><div class='collapsible-header'>"
@@ -148,6 +148,14 @@ function compareTwoDates() {
     + "<span class='codejs-function'>compare</span>(<span class='codejs-keyword'>new</span> <span "
     + "class='codejs-defMethod'>Date</span>('2020-03-30'), <span class='codejs-keyword'>new</span> "
     + "<span class='codejs-defMethod'>Date</span>('2020-01-01'));    // true<br>"
+    + "</code>"
+    return code;
+}
+
+function dateTo_yyyy_mm_dd_format() {
+    let code = "<code class='javascript'><span class='codejs-keyword'>let </span>"
+    + "formatYmd = date => date.<span class='codejs-defMethod'>toISOString</span>().<span class='codejs-"
+    + "defMethod'>slice</span>(0, 10);"
     + "</code>"
     return code;
 }
