@@ -30,7 +30,7 @@ $(function() {
     // Get all siblings of an element
     + "<li><div class='collapsible-header'>"
     + "<h6>$ Get all siblings of an element</h6></div>"
-    + "<div class='collapsible-body codejs'></div></li>"
+    + "<div class='collapsible-body codejs'>"+ getAllSiblingsOfAnElement() +"</div></li>"
 
     // Get the selected text
     + "<li><div class='collapsible-header'>"
@@ -144,6 +144,14 @@ function detectMacosBrowser() {
     let code = "<code class='javascript'><span class='codejs-keyword'>let </span>"
     + "isMacBrowser = <span class='codejs-other'>/Mac|iPod|iPhone|iPad/</span>.<span class='codejs-"
     + "defMethod'>test</span>(navigator.platform);"
+    + "</code>"
+    return code;
+}
+
+function getAllSiblingsOfAnElement() {
+    let code = "<code class='javascript'><span class='codejs-keyword'>let </span>"
+    + "siblings = ele => <span class='codejs-other'>[]</span>.slice.<span class='codejs-defMethod'>call"
+    + "</span>(ele.parentNode.children).<span class='codejs-defMethod'>filter</span>((child) => (child !== ele));"
     + "</code>"
     return code;
 }
