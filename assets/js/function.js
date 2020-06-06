@@ -30,7 +30,7 @@ $(function() {
     // Curry a function
     + "<li><div class='collapsible-header'>"
     + "<h6>--> Curry a function</h6></div>"
-    + "<div class='collapsible-body codejs'></div></li>"
+    + "<div class='collapsible-body codejs'>"+ curry_a_function() +"</div></li>"
 
     // Delay the evaluation of a function
     + "<li><div class='collapsible-header'>"
@@ -135,6 +135,22 @@ function createAnEmptyFunction() {
     let code = "<code class='javascript'><span class='codejs-keyword'>let </span>"
     + "noop = () => <span class='codejs-other'>{}</span>;<br><br>// Or<br>"
     + "<span class='codejs-keyword'>let </span>noop = <span class='codejs-defMethod'>Function</span>();"
+    + "</code>"
+    return code;
+}
+
+function curry_a_function() {
+    let code = "<code class='javascript'><span class='codejs-keyword'>let </span>"
+    + "curry = <span class='codejs-function'>(fn, ...args)</span> => fn.<span class='codejs-other'>"
+    + "length</span> <= args.<span class='codejs-other'>length</span> ? fn(...args) : curry.<span "
+    + "class='codejs-defMethod'>bind</span>(null, fn, ...args);<br><br>// Example<br><span class="
+    + "'codejs-keyword'>let </span>sum = <span class='codejs-function'>(a, b, c)</span> => a + b + c;<br>"
+    + "<span class='codejs-function'>curry</span>(sum)(1)(2)(3); // 6<br>"
+    + "<span class='codejs-function'>curry</span>(sum)(1, 2, 3); // 6<br>"
+    + "<span class='codejs-function'>curry</span>(sum, 1)(2, 3); // 6<br>"
+    + "<span class='codejs-function'>curry</span>(sum, 1)(2)(3); // 6<br>"
+    + "<span class='codejs-function'>curry</span>(sum, 1, 2)(3); // 6<br>"
+    + "<span class='codejs-function'>curry</span>(sum, 1, 2, 3); // 6<br>"
     + "</code>"
     return code;
 }
