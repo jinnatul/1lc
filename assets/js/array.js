@@ -30,7 +30,7 @@ $(function() {
     // Check if an object is an array
     + "<li><div class='collapsible-header'>"
     + "<h6>$ Check if an object is an array</h6></div>"
-    + "<div class='collapsible-body codejs'></div></li>"
+    + "<div class='collapsible-body codejs'>"+ ifAnObjectIsAnArray() +"</div></li>"
 
     // Clone an array
     + "<li><div class='collapsible-header'>"
@@ -240,6 +240,14 @@ function ifAnArrayIsSubsetOfOtherArray() {
     + "<span class='codejs-function'>isSubset</span>([1,2], [1,2,3,4]); // true<br>"
     + "<span class='codejs-function'>isSubset</span>([1,2,5], [1,2,3,4]); // false<br>"
     + "<span class='codejs-function'>isSubset</span>([6], [1,2,3,4]); // false<br>"
+    + "</code>"
+    return code;
+}
+
+function ifAnObjectIsAnArray() {
+    let code = "<code class='javascript'><span class='codejs-keyword'>let </span>"
+    + "isArray = obj => <span class='codejs-other'>Array</span>.<span class='codejs-defMethod'>isArray"
+    + "</span>(obj);"
     + "</code>"
     return code;
 }
