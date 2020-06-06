@@ -30,7 +30,7 @@ $(function() {
     // Check if a string contains whitespace
     + "<li><div class='collapsible-header'>"
     + "<h6>--> Check if a string contains whitespace</h6></div>"
-    + "<div class='collapsible-body codejs'></div></li>"
+    + "<div class='collapsible-body codejs'>"+ if_a_stringContainsWhitespace() +"</div></li>"
 
     // Check if a string is a palindrome
     + "<li><div class='collapsible-header'>"
@@ -245,6 +245,15 @@ function if_A_StringContainsUpperCaseCharacters() {
     + "<br><br>// Examples<br>"
     + "<span class='codejs-function'>containsUpperCase</span>('Hello World'); // true<br>"
     + "<span class='codejs-function'>containsUpperCase</span>('hello world'); // false<br>"
+    + "</code>"
+    return code;
+}
+
+function if_a_stringContainsWhitespace() {
+    let code = "<code class='javascript'><span class='codejs-keyword'>let </span>"
+    + "containsWhitespace = str => str => <span class='codejs-other'>/\s/</span>.<span class='codejs-"
+    + "defMethod'>test</span>(str);<br><br>// Example<br>"
+    + "<span class='codejs-function'>containsWhitespace</span>('hello world'); // true"
     + "</code>"
     return code;
 }
