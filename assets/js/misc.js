@@ -30,7 +30,7 @@ $(function() {
     // Check if the code is running in the browser
     + "<li><div class='collapsible-header'>"
     + "<h6>$ Check if the code is running in the browser</h6></div>"
-    + "<div class='collapsible-body codejs'></div></li>"
+    + "<div class='collapsible-body codejs'>"+ ifTheCodeIsRunningInTheBrowser() +"</div></li>"
 
     // Convert celsius to fahrenheit
     + "<li><div class='collapsible-header'>"
@@ -161,6 +161,15 @@ function ifTheCodeIsRunningInNodeJS() {
     + "isNode = <span class='codejs-keyword'>typeof</span> process !== '<span class='codejs-other'>"
     + "undefined</span>' && process.versions != <span class='codejs-keyword'>null</span> && process."
     + "versions.node != <span class='codejs-keyword'>null</span>;"
+    + "</code>"
+    return code;
+}
+
+function ifTheCodeIsRunningInTheBrowser() {
+    let code = "<code class='javascript'><span class='codejs-keyword'>let </span>"
+    + "isBrowser = <span class='codejs-other'>typeof</span> window === '<span class='codejs-keyword'>"
+    + "object</span>' && <span class='codejs-other'>typeof</span> document === '<span class='codejs-"
+    + "keyword'>object</span>';"
     + "</code>"
     return code;
 }
