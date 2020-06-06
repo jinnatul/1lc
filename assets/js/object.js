@@ -30,7 +30,7 @@ $(function() {
     // Create an object from the pairs of key and value
     + "<li><div class='collapsible-header'>"
     + "<h6>$ Create an object from the pairs of key and value</h6></div>"
-    + "<div class='collapsible-body codejs'></div></li>"
+    + "<div class='collapsible-body codejs'>"+ objectFromThePairsOfKeyAndValue() +"</div></li>"
 
     // Get the value at given path of an object
     + "<li><div class='collapsible-header'>"
@@ -118,6 +118,17 @@ function emptyMapThatDoesNotHaveProperties() {
     let code = "<code class='javascript'><span class='codejs-keyword'>let </span>"
     + "map = <span class='codejs-keyword'>Object</span>.<span class='codejs-defMethod'>create</span>(null);"
     + "<br><br>// OR<br><span class='codejs-keyword'>let </span> map = {};"
+    + "</code>"
+    return code;
+}
+
+function objectFromThePairsOfKeyAndValue() {
+    let code = "<code class='javascript'><span class='codejs-keyword'>let </span>"
+    + "toObj = arr => <span class='codejs-other'>Object</span>.<span class='codejs-defMethod'>fromEntries"
+    + "</span>(arr)<br><br>//Or<br><span class='codejs-keyword'>let </span>"
+    + "toObj = arr => arr.<span class='codejs-defMethod'>reduce</span>((a, c) => ((a[c[0]] = c[1]), a), {});"
+    + "<br><br>// Example<br><span class='codejs-function'>toObj</span>([['a', 1], ['b', 2], ['c', 3]]); "
+    + "// <span class='codejs-other'>{ a: 1, b: 2, c: 3 }</span>"
     + "</code>"
     return code;
 }
