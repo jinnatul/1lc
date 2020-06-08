@@ -35,7 +35,7 @@ $(function() {
     // Clone an array
     + "<li><div class='collapsible-header'>"
     + "<h6>$ Clone an array</h6></div>"
-    + "<div class='collapsible-body codejs'></div></li>"
+    + "<div class='collapsible-body codejs'>"+ clone_an_array() +"</div></li>"
 
     // Compare two arrays regardless of order
     + "<li><div class='collapsible-header'>"
@@ -248,6 +248,21 @@ function ifAnObjectIsAnArray() {
     let code = "<code class='javascript'><span class='codejs-keyword'>let </span>"
     + "isArray = obj => <span class='codejs-other'>Array</span>.<span class='codejs-defMethod'>isArray"
     + "</span>(obj);"
+    + "</code>"
+    return code;
+}
+
+function clone_an_array() {
+    let code = "<code class='javascript'><span class='codejs-keyword'>let </span>"
+    + "clone = arr => arr.<span class='codejs-defMethod'>slice</span>(0);<br><br>// Or<br>"
+    + "<span class='codejs-keyword'>let </span>clone = arr => <span class='codejs-other'>[...arr]</span>;"
+    + "<br><br>// Or<br><span class='codejs-keyword'>let </span>clone = arr => <span class='codejs-other'>"
+    + "Array</span>.<span class='codejs-defMethod'>from</span>(arr);<br><br>// Or<br><span class='codejs-"
+    + "keyword'>let </span>clone = arr => arr.<span class='codejs-defMethod'>map</span>(x => x);<br><br>// Or"
+    + "<br><span class='codejs-keyword'>let </span>clone = arr => <span class='codejs-other'>JSON</span>."
+    + "<span class='codejs-other'>parse</span>(<span class='codejs-other'>JSON</span>.<span class='codejs-"
+    + "defMethod'>stringify</span>(arr));<br><br>// Or<br><span class='codejs-keyword'>let </span>"
+    + "clone = arr => arr.<span class='codejs-defMethod'>concat</span>([]);"
     + "</code>"
     return code;
 }
