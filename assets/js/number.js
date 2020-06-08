@@ -35,7 +35,7 @@ $(function() {
     // Calculate the remainder of division of arguments
     + "<li><div class='collapsible-header'>"
     + "<h6>--> Calculate the remainder of division of arguments</h6></div>"
-    + "<div class='collapsible-body codejs'></div></li>"
+    + "<div class='collapsible-body codejs'>"+ theRemainderOfDivisionOfArguments() +"</div></li>"
 
     // Calculate the sum of arguments
     + "<li><div class='collapsible-header'>"
@@ -214,6 +214,15 @@ function calculateTheModOfCollectionIndex() {
     + "<span class='codejs-function'>mod</span>(-1, 5); // 4<br>"
     + "<span class='codejs-function'>mod</span>(3, 5); // 3<br>"
     + "<span class='codejs-function'>mod</span>(6, 5); // 1<br>"
+    + "</code>"
+    return code;
+}
+
+function theRemainderOfDivisionOfArguments() {
+    let code = "<code class='javascript'><span class='codejs-keyword'>let </span>"
+    + "remainder = <span class='codejs-function'>(...args)</span> => args.<span class='codejs-defMethod'>"
+    + "reduce</span>((a, b) => a % b);<br><br>// Example<br>"
+    + "<span class='codejs-function'>remainder</span>(1, 2, 3, 4); // 1"
     + "</code>"
     return code;
 }
