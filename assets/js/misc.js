@@ -35,7 +35,7 @@ $(function() {
     // Convert celsius to fahrenheit
     + "<li><div class='collapsible-header'>"
     + "<h6>$ Convert celsius to fahrenheit</h6></div>"
-    + "<div class='collapsible-body codejs'></div></li>"
+    + "<div class='collapsible-body codejs'>"+ celsiusToFahrenheit() +"</div></li>"
 
     // Convert hex to rgb
     + "<li><div class='collapsible-header'>"
@@ -170,6 +170,19 @@ function ifTheCodeIsRunningInTheBrowser() {
     + "isBrowser = <span class='codejs-other'>typeof</span> window === '<span class='codejs-keyword'>"
     + "object</span>' && <span class='codejs-other'>typeof</span> document === '<span class='codejs-"
     + "keyword'>object</span>';"
+    + "</code>"
+    return code;
+}
+
+function celsiusToFahrenheit() {
+    let code = "<code class='javascript'><span class='codejs-keyword'>let </span>"
+    + "celsiusToFahrenheit = celsius => celsius * 9/5 + 32;<br><br><span class='codejs-keyword'>let </span>"
+    + "fahrenheitToCelsius = fahrenheit => (fahrenheit - 32) * 5/9;<br><br>// Examples<br>"
+    + "<span class='codejs-function'>celsiusToFahrenheit</span>(15);    // 59<br>"
+    + "<span class='codejs-function'>celsiusToFahrenheit</span>(0);     // 32<br>"
+    + "<span class='codejs-function'>celsiusToFahrenheit</span>(-20);   // -4<br><br>"
+    + "<span class='codejs-function'>fahrenheitToCelsius</span>(59);    // 15<br>"
+    + "<span class='codejs-function'>fahrenheitToCelsius</span>(32);    // 0<br>"
     + "</code>"
     return code;
 }
