@@ -35,7 +35,7 @@ $(function() {
     // Get the value at given path of an object
     + "<li><div class='collapsible-header'>"
     + "<h6>$ Get the value at given path of an object</h6></div>"
-    + "<div class='collapsible-body codejs'></div></li>"
+    + "<div class='collapsible-body codejs'>"+ getTheValueAtGivenPathOfAnObject() +"</div></li>"
 
     // Invert keys and values of an object
     + "<li><div class='collapsible-header'>"
@@ -129,6 +129,16 @@ function objectFromThePairsOfKeyAndValue() {
     + "toObj = arr => arr.<span class='codejs-defMethod'>reduce</span>((a, c) => ((a[c[0]] = c[1]), a), {});"
     + "<br><br>// Example<br><span class='codejs-function'>toObj</span>([['a', 1], ['b', 2], ['c', 3]]); "
     + "// <span class='codejs-other'>{ a: 1, b: 2, c: 3 }</span>"
+    + "</code>"
+    return code;
+}
+
+function getTheValueAtGivenPathOfAnObject() {
+    let code = "<code class='javascript'><span class='codejs-keyword'>let </span>"
+    + "getValue = <span class='codejs-function'>(path, obj)</span> => path.<span class='codejs-defMethod'>"
+    + "split</span>('.').<span class='codejs-defMethod'>reduce</span>((acc, c) => acc && acc[c], obj);"
+    + "<br><br>// Example<br>"
+    + "<span class='codejs-function'>getValue</span>('a.b', { a: { b: 'Hello World' } }); // 'Hello World';"
     + "</code>"
     return code;
 }
