@@ -35,7 +35,7 @@ $(function() {
     // Delay the evaluation of a function
     + "<li><div class='collapsible-header'>"
     + "<h6>--> Delay the evaluation of a function</h6></div>"
-    + "<div class='collapsible-body codejs'></div></li>"
+    + "<div class='collapsible-body codejs'>"+ delayTheEvaluationOf_a_function() +"</div></li>"
 
     // Execute a function once
     + "<li><div class='collapsible-header'>"
@@ -151,6 +151,19 @@ function curry_a_function() {
     + "<span class='codejs-function'>curry</span>(sum, 1)(2)(3); // 6<br>"
     + "<span class='codejs-function'>curry</span>(sum, 1, 2)(3); // 6<br>"
     + "<span class='codejs-function'>curry</span>(sum, 1, 2, 3); // 6<br>"
+    + "</code>"
+    return code;
+}
+
+function delayTheEvaluationOf_a_function() {
+    let code = "<code class='javascript'><span class='codejs-keyword'>let </span>"
+    + "thunkfy = fn => <span class='codejs-function'>(...args)</span> => () => <span class='codejs-"
+    + "function'>fn(...args)</span>;<br><br>// Example<br><span class='codejs-keyword'>let </span>"
+    + "heavyComputation = x => <span class='codejs-defMethod'>doStuff</span>(x);<br><span class="
+    + "'codejs-keyword'>let </span>unnecessarySlow = manyThings.<span class='codejs-defMethod'>map</span>"
+    + "(heavyComputation).<span class='codejs-defMethod'>find</span>(result => result.criteria);<br>"
+    + "<span class='codejs-keyword'>let </span>probablyFaster = manyThings.<span class='codejs-defMethod'>"
+    + "map</span>(thunkfy(heavyComputation)).<span class='codejs-defMethod'>find</span>(thunk => thunk().criteria);"
     + "</code>"
     return code;
 }
