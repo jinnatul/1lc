@@ -35,7 +35,7 @@ $(function() {
     // Convert seconds to hh mm ss format
     + "<li><div class='collapsible-header'>"
     + "<h6>--> Convert seconds to hh mm ss format</h6></div>"
-    + "<div class='collapsible-body codejs'></div></li>"
+    + "<div class='collapsible-body codejs'>"+ seconds_to_hh_mm_ss_format() +"</div></li>"
 
     // Extract year month day hour minute second and millisecond from a date
     + "<li><div class='collapsible-header'>"
@@ -156,6 +156,23 @@ function dateTo_yyyy_mm_dd_format() {
     let code = "<code class='javascript'><span class='codejs-keyword'>let </span>"
     + "formatYmd = date => date.<span class='codejs-defMethod'>toISOString</span>().<span class='codejs-"
     + "defMethod'>slice</span>(0, 10);"
+    + "</code>"
+    return code;
+}
+
+function seconds_to_hh_mm_ss_format() {
+    let code = "<code class='javascript'><span class='codejs-keyword'>let </span>"
+    + "formatSeconds = s => <span class='codejs-other'>new</span> <span class='codejs-defMethod'>Date"
+    + "</span>(s * 1000).<span class='codejs-defMethod'>toISOString</span>().<span class='codejs-defMethod'"
+    + ">substr</span>(11, 8);<br><br>// Or<br><span class='codejs-keyword'>let </span>formatSeconds = s "
+    + "=> (<span class='codejs-other'>new</span> <span class='codejs-defMethod'>Date</span>(s * 1000))."
+    + "<span class='codejs-defMethod'>toUTCString</span>().<span class='codejs-other'>match(/(\d\d:\d\d:\d\d)/)"
+    + "</span>[0];<br><br>// Or<br><span class='codejs-keyword'>let </span>formatSeconds = s => <span "
+    + "class='codejs-other'>[parseInt(s / 60 / 60), parseInt(s / 60 % 60), parseInt(s % 60)]</span>.<span "
+    + "class='codejs-defMethod'>join</span>(':').<span class='codejs-defMethod'>replace</span>(/\b(\d)\b/g,"
+    + " '0$1');<br><br>// Examples<br>"
+    + "<span class='codejs-function'>formatSeconds</span>(200); // 00:03:20<br>"
+    + "<span class='codejs-function'>formatSeconds</span>(500); // 00:08:20"
     + "</code>"
     return code;
 }
