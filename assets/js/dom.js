@@ -35,7 +35,7 @@ $(function() {
     // Get the selected text
     + "<li><div class='collapsible-header'>"
     + "<h6>$ Get the selected text</h6></div>"
-    + "<div class='collapsible-body codejs'></div></li>"
+    + "<div class='collapsible-body codejs'>"+ getTheSelectedText() +"</div></li>"
 
     // Go back to the previous page
     + "<li><div class='collapsible-header'>"
@@ -152,6 +152,14 @@ function getAllSiblingsOfAnElement() {
     let code = "<code class='javascript'><span class='codejs-keyword'>let </span>"
     + "siblings = ele => <span class='codejs-other'>[]</span>.slice.<span class='codejs-defMethod'>call"
     + "</span>(ele.parentNode.children).<span class='codejs-defMethod'>filter</span>((child) => (child !== ele));"
+    + "</code>"
+    return code;
+}
+
+function getTheSelectedText() {
+    let code = "<code class='javascript'><span class='codejs-keyword'>let </span>"
+    + "getSelectedText = () => <span class='codejs-keyword'>window</span>.<span class='codejs-defMethod'"
+    + ">getSelection</span>().<span class='codejs-defMethod'>toString</span>();"
     + "</code>"
     return code;
 }
