@@ -40,7 +40,7 @@ $(function() {
     // Compare two arrays regardless of order
     + "<li><div class='collapsible-header'>"
     + "<h6>$ Compare two arrays regardless of order</h6></div>"
-    + "<div class='collapsible-body codejs'></div></li>"
+    + "<div class='collapsible-body codejs'>"+ compareTwoArraysRegardlessOfOrder() +"</div></li>"
 
     // Compare two arrays
     + "<li><div class='collapsible-header'>"
@@ -263,6 +263,24 @@ function clone_an_array() {
     + "<span class='codejs-other'>parse</span>(<span class='codejs-other'>JSON</span>.<span class='codejs-"
     + "defMethod'>stringify</span>(arr));<br><br>// Or<br><span class='codejs-keyword'>let </span>"
     + "clone = arr => arr.<span class='codejs-defMethod'>concat</span>([]);"
+    + "</code>"
+    return code;
+}
+
+function compareTwoArraysRegardlessOfOrder() {
+    let code = "<code class='javascript'><span class='codejs-keyword'>let </span>"
+    + "isEqual = <span class='codejs-function'>(a, b)</span> => <span class='codejs-other'>JSON</span>."
+    + "<span class='codejs-defMethod'>stringify</span>(a.sort()) === <span class='codejs-other'>JSON</span>."
+    + "<span class='codejs-defMethod'>stringify</span>(b.sort());<br><br>// Or<br><span class='codejs-keyword'>let </span>"
+    + "isEqual = <span class='codejs-function'>(a, b)</span> => a.length === b.length && a.<span class"
+    + "='codejs-defMethod'>every</span>((v) => b.<span class='codejs-defMethod'>includes</span>(v));"
+    + "<br><br>// Or<br><span class='codejs-keyword'>let </span>"
+    + "isEqual = <span class='codejs-function'>(a, b)</span> => a.length === b.length && (<span class"
+    + "='codejs-other'>new</span> <span class='codejs-defMethod'>Set</span>(a.<span class='codejs-defMethod'"
+    + ">concat</span>(b)).size === a.length);<br><br>// Examples<br>"
+    + "<span class='codejs-function'>isEqual</span>([1, 2, 3], [1, 2, 3]); // true<br>"
+    + "<span class='codejs-function'>isEqual</span>([1, 2, 3], [1, 3, 2]); // true<br>"
+    + "<span class='codejs-function'>isEqual</span>([1, 2, 3], [1, '2', 3]); // false<br>"
     + "</code>"
     return code;
 }
