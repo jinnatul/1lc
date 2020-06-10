@@ -40,7 +40,7 @@ $(function() {
     // Extract year month day hour minute second and millisecond from a date
     + "<li><div class='collapsible-header'>"
     + "<h6>--> Extract year month day hour minute second and millisecond from a date</h6></div>"
-    + "<div class='collapsible-body codejs'></div></li>"
+    + "<div class='collapsible-body codejs'>"+ dateFromData() +"</div></li>"
 
     // Format a date for the given locale
     + "<li><div class='collapsible-header'>"
@@ -173,6 +173,16 @@ function seconds_to_hh_mm_ss_format() {
     + " '0$1');<br><br>// Examples<br>"
     + "<span class='codejs-function'>formatSeconds</span>(200); // 00:03:20<br>"
     + "<span class='codejs-function'>formatSeconds</span>(500); // 00:08:20"
+    + "</code>"
+    return code;
+}
+
+function dateFromData() {
+    let code = "<code class='javascript'><span class='codejs-keyword'>let </span>"
+    + "extract = date => date.<span class='codejs-defMethod'>toISOString</span>().<span class='codejs-"
+    + "defMethod'>split</span>(/[^0-9]/).<span class='codejs-defMethod'>slice</span>(0, -1);<br><br>"
+    + "<span class='codejs-other'>`extract` is an array of [year, month, day, hour, minute, second, "
+    + "millisecond]</span>"
     + "</code>"
     return code;
 }
