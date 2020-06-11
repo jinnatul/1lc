@@ -40,7 +40,7 @@ $(function() {
     // Go back to the previous page
     + "<li><div class='collapsible-header'>"
     + "<h6>$ Go back to the previous page</h6></div>"
-    + "<div class='collapsible-body codejs'></div></li>"
+    + "<div class='collapsible-body codejs'>"+ goBackToThePreviousPage() +"</div></li>"
 
     // Hide an element
     + "<li><div class='collapsible-header'>"
@@ -160,6 +160,14 @@ function getTheSelectedText() {
     let code = "<code class='javascript'><span class='codejs-keyword'>let </span>"
     + "getSelectedText = () => <span class='codejs-keyword'>window</span>.<span class='codejs-defMethod'"
     + ">getSelection</span>().<span class='codejs-defMethod'>toString</span>();"
+    + "</code>"
+    return code;
+}
+
+function goBackToThePreviousPage() {
+    let code = "<code class='javascript'>"
+    + "<span class='codejs-other'>history</span>.<span class='codejs-defMethod'>back</span>();<br><br>// Or"
+    + "<br><span class='codejs-other'>history</span>.<span class='codejs-defMethod'>go</span>(-1);"
     + "</code>"
     return code;
 }
