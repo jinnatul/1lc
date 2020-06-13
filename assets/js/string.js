@@ -45,7 +45,7 @@ $(function() {
     // Check if a string is upper case
     + "<li><div class='collapsible-header'>"
     + "<h6>--> Check if a string is upper case</h6></div>"
-    + "<div class='collapsible-body codejs'></div></li>"
+    + "<div class='collapsible-body codejs'>"+ if_a_stringIsUpperCase() +"</div></li>"
 
     // Check if a url is absolute
     + "<li><div class='collapsible-header'>"
@@ -272,6 +272,13 @@ function if_a_stringIs_a_palindrome() {
 function if_a_stringIsLowerCase() {
     let code = "<code class='javascript'><span class='codejs-keyword'>let </span>"
     + "isLowerCase = str => str === str.<span class='codejs-defMethod'>toLowerCase</span>();"
+    + "</code>"
+    return code;
+}
+
+function if_a_stringIsUpperCase() {
+    let code = "<code class='javascript'><span class='codejs-keyword'>let </span>"
+    + "isUpperCase = str => str === str.<span class='codejs-defMethod'>toUpperCase</span>();"
     + "</code>"
     return code;
 }
