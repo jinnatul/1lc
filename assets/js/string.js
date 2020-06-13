@@ -40,7 +40,7 @@ $(function() {
     // Check if a string is lower case
     + "<li><div class='collapsible-header'>"
     + "<h6>--> Check if a string is lower case</h6></div>"
-    + "<div class='collapsible-body codejs'></div></li>"
+    + "<div class='collapsible-body codejs'>"+ if_a_stringIsLowerCase() +"</div></li>"
 
     // Check if a string is upper case
     + "<li><div class='collapsible-header'>"
@@ -265,6 +265,13 @@ function if_a_stringIs_a_palindrome() {
     + "<br><br>// Examples<br>"
     + "<span class='codejs-function'>isPalindrome</span>('abc'); // false<br>"
     + "<span class='codejs-function'>isPalindrome</span>('abcba'); // true"
+    + "</code>"
+    return code;
+}
+
+function if_a_stringIsLowerCase() {
+    let code = "<code class='javascript'><span class='codejs-keyword'>let </span>"
+    + "isLowerCase = str => str === str.<span class='codejs-defMethod'>toLowerCase</span>();"
     + "</code>"
     return code;
 }
