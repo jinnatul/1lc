@@ -55,7 +55,7 @@ $(function() {
     // Shallow copy an object
     + "<li><div class='collapsible-header'>"
     + "<h6>$ Shallow copy an object</h6></div>"
-    + "<div class='collapsible-body codejs'></div></li>"
+    + "<div class='collapsible-body codejs'>"+ shallowCopyAnObject() +"</div></li>"
 
     + "</ul>"
     
@@ -171,6 +171,14 @@ function pick_a_subsetOfPropertiesOfAnObject() {
     + "-defMethod'>reduce</span>((res, k) => <span class='codejs-other'>Object</span>.<span class='codejs-"
     + "defMethod'>assign</span>(res, {[k]: obj[k]}), {});<br><br>// Example<br>"
     + "<span class='codejs-function'>pick</span>({ a: '1', b: '2', c: '3' }, ['a', 'b']); // { a: '1', b: '2' }"
+    + "</code>"
+    return code;
+}
+
+function shallowCopyAnObject() {
+    let code = "<code class='javascript'><span class='codejs-keyword'>let </span>"
+    + "shallowCopy = obj => <span class='codejs-other'>Object</span>.<span class='codejs-defMethod'>"
+    + "assign</span>({}, obj);"
     + "</code>"
     return code;
 }
