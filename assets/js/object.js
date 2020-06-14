@@ -50,7 +50,7 @@ $(function() {
     // Pick a subset of properties of an object
     + "<li><div class='collapsible-header'>"
     + "<h6>$ Pick a subset of properties of an object</h6></div>"
-    + "<div class='collapsible-body codejs'></div></li>"
+    + "<div class='collapsible-body codejs'>"+ pick_a_subsetOfPropertiesOfAnObject() +"</div></li>"
 
     // Shallow copy an object
     + "<li><div class='collapsible-header'>"
@@ -160,6 +160,17 @@ function omit_a_subsetOfPropertiesFromAnObject() {
     + "codejs-defMethod'>reduce</span>((res, k) => <span class='codejs-other'>Object</span>.<span class="
     + "'codejs-defMethod'>assign</span>(res, {[k]: obj[k]}), {});<br><br>// Example<br>"
     + "<span class='codejs-function'>omit</span>({a: '1', b: '2', c: '3'}, ['a', 'b']); // returns { c: '3' }"
+    + "</code>"
+    return code;
+}
+
+function pick_a_subsetOfPropertiesOfAnObject() {
+    let code = "<code class='javascript'><span class='codejs-keyword'>let </span>"
+    + "pick = (obj, keys) => <span class='codejs-other'>Object</span>.<span class='codejs-defMethod'>keys"
+    + "</span>(obj).<span class='codejs-defMethod'>filter</span>(k => keys.includes(k)).<span class='codejs"
+    + "-defMethod'>reduce</span>((res, k) => <span class='codejs-other'>Object</span>.<span class='codejs-"
+    + "defMethod'>assign</span>(res, {[k]: obj[k]}), {});<br><br>// Example<br>"
+    + "<span class='codejs-function'>pick</span>({ a: '1', b: '2', c: '3' }, ['a', 'b']); // { a: '1', b: '2' }"
     + "</code>"
     return code;
 }
