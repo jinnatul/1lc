@@ -40,7 +40,7 @@ $(function() {
     // Invert keys and values of an object
     + "<li><div class='collapsible-header'>"
     + "<h6>$ Invert keys and values of an object</h6></div>"
-    + "<div class='collapsible-body codejs'></div></li>"
+    + "<div class='collapsible-body codejs'>"+ invertKeysAndValuesOfAnObject() +"</div></li>"
 
     // Omit a subset of properties from an object
     + "<li><div class='collapsible-header'>"
@@ -139,6 +139,16 @@ function getTheValueAtGivenPathOfAnObject() {
     + "split</span>('.').<span class='codejs-defMethod'>reduce</span>((acc, c) => acc && acc[c], obj);"
     + "<br><br>// Example<br>"
     + "<span class='codejs-function'>getValue</span>('a.b', { a: { b: 'Hello World' } }); // 'Hello World';"
+    + "</code>"
+    return code;
+}
+
+function invertKeysAndValuesOfAnObject() {
+    let code = "<code class='javascript'><span class='codejs-keyword'>let </span>"
+    + "invert = obj => <span class='codejs-other'>Object</span>.<span class='codejs-defMethod'>keys</span>"
+    + "(obj).<span class='codejs-defMethod'>reduce</span><((res, k) => <span class='codejs-other'>Object"
+    + "</span>.<span class='codejs-defMethod'>assign</span>(res, {[obj[k]]: k}), {});<br><br>// Example<br>"
+    + "<span class='codejs-function'>invert</span>({ a: '1', b: '2', c: '3' }); // { 1: 'a', 2: 'b', 3: 'c' }"
     + "</code>"
     return code;
 }
